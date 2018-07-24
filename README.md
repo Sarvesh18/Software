@@ -1,5 +1,14 @@
 Software
 --------
+LCM
+---
+><br>
+><hr>
+
+Calculator
+----------
+><br>
+><hr>
 
 Get IN Touch 
 ------------
