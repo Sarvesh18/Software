@@ -1,15 +1,11 @@
-Calculator
-----------
-><br>
-><br>
->![Technomentum17](https://github.com/Sarvesh18/WebApp/blob/master/AICTE%20(SmartIndiaHackathon17%20%26%20Technomentum17)/Technomentum17.jpg)
-><hr>
-
 LCM
 ---
 ><br>
+><hr>
+
+Calculator
+----------
 ><br>
->[YouTube](https://www.youtube.com/watch?v=)
 ><hr>
 
 Get IN Touch 
