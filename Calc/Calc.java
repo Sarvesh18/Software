@@ -1,5 +1,5 @@
 import java.awt.*;
-import java.awt.event.*; 
+import java.awt.event.*;
 class Calc implements ActionListener
 {
 	static String str="";
@@ -17,7 +17,7 @@ class Calc implements ActionListener
 																		AWT UI
 **************************************************************************************************************************************************************************/
 		f=new Frame(s);
-		
+
 		int i, j, x, y;
 		String[] ll={"View","Edit","Help"};
 		for(i=0,x=10,y=20;i<3;i++,x=x+50)
@@ -27,8 +27,8 @@ class Calc implements ActionListener
 			f.add(l);
 		}
 	/*
-		String[][] bl = {{"MC","MR","MS","M+","M-"},{"<-","CE","C","+-","SQRT"},{"7","8","9","/","%"},{"4","5","6","*","1/x"},{"1","2","3","-","="},{"0","0",".","+","="}};	
-		for(i=0,y=100;i<6;i++,y=y+50) 
+		String[][] bl = {{"MC","MR","MS","M+","M-"},{"<-","CE","C","+-","SQRT"},{"7","8","9","/","%"},{"4","5","6","*","1/x"},{"1","2","3","-","="},{"0","0",".","+","="}};
+		for(i=0,y=100;i<6;i++,y=y+50)
 		{
 			for(j=0,x=10;j<5;j++,x=x+50)
 			{
@@ -38,13 +38,13 @@ class Calc implements ActionListener
 				f.add(b);
 			}
 		}
-	*/ 
+	*/
 		tf=new TextField();
 		tf.setBounds(10,60,240,30);
 		tf.setText("0");
 		f.add(tf);
-		String[][] bl = {{"MC","MR","MS","M+","M-"},{"<-","CE","C","+-","SQRT"},{"7","8","9","/","%"},{"4","5","6","*","1/x"},{"1","2","3","-","="},{"0","0",".","+","="}};	
-		
+		String[][] bl = {{"MC","MR","MS","M+","M-"},{"<-","CE","C","+-","SQRT"},{"7","8","9","/","%"},{"4","5","6","*","1/x"},{"1","2","3","-","="},{"0","0",".","+","="}};
+
 		//{"MC","MR","MS","M+","M-"}
 		y=100;
 		x=10;
@@ -78,7 +78,7 @@ class Calc implements ActionListener
 		msub.setBounds(x,y,40,40);
 		msub.addActionListener(this);
 		f.add(msub);
-		
+
 		//{"<-","CE","C","+-","SQRT"}
 		x=10;
 		j=0;
@@ -112,7 +112,7 @@ class Calc implements ActionListener
 		sqrt.setBounds(x,y,40,40);
 		sqrt.addActionListener(this);
 		f.add(sqrt);
-		
+
 		//{"7","8","9","/","%"}
 		x=10;
 		j=0;
@@ -146,7 +146,7 @@ class Calc implements ActionListener
 		per.setBounds(x,y,40,40);
 		per.addActionListener(this);
 		f.add(per);
-		
+
 		//{"4","5","6","*","1/x"}
 		x=10;
 		j=0;
@@ -180,7 +180,7 @@ class Calc implements ActionListener
 		fra.setBounds(x,y,40,40);
 		fra.addActionListener(this);
 		f.add(fra);
-		
+
 		//{"1","2","3","-","="}
 		x=10;
 		j=0;
@@ -214,7 +214,7 @@ class Calc implements ActionListener
 		equ.setBounds(x,y,40,90);
 		equ.addActionListener(this);
 		f.add(equ);
-		
+
 		//{"0","0",".","+","="}
 		x=10;
 		j=0;
@@ -238,7 +238,7 @@ class Calc implements ActionListener
 		f.add(add);
 		x+=50;
 		j+=1;
-		
+
 		f.setLayout(null);
 		f.setSize(260,400);
 		f.setVisible(true);
@@ -377,13 +377,13 @@ class Calc implements ActionListener
 //Back Clear
 		if(e.getSource()==bac)
 		{
-			try 
-			{    
+			try
+			{
 				str=str.substring(0,str.length()-1);
 				buffer=buffer.substring(0,buffer.length()-1);
 				tf.setText(str);
-            } 
-			catch(Exception except) 
+            }
+			catch(Exception except)
 			{
                 System.out.println("Exception Handle"+except);
 				tf.setText(str);
@@ -400,15 +400,15 @@ class Calc implements ActionListener
 //*,/,+,-
 		if(e.getSource()==mul)
 		{
-			try 
-			{    
+			try
+			{
 				calculate(ch);
 				ch=1;
 				str=str+"*";
 				buffer="";
 				tf.setText(str);
-            } 
-			catch(Exception except) 
+            }
+			catch(Exception except)
 			{
                 System.out.println("Exception Handle"+except);
 				tf.setText(str);
@@ -416,15 +416,15 @@ class Calc implements ActionListener
 		}
 		if(e.getSource()==div)
 		{
-			try 
-			{    
+			try
+			{
 				calculate(ch);
 				ch=2;
 				str=str+"/";
 				buffer="";
 				tf.setText(str);
-            } 
-			catch(Exception except) 
+            }
+			catch(Exception except)
 			{
                 System.out.println("Exception Handle"+except);
 				tf.setText(str);
@@ -432,15 +432,15 @@ class Calc implements ActionListener
 		}
 		if(e.getSource()==add)
 		{
-			try 
-			{    
+			try
+			{
 				calculate(ch);
 				ch=3;
 				str=str+"+";
 				buffer="";
 				tf.setText(str);
-            } 
-			catch(Exception except) 
+            }
+			catch(Exception except)
 			{
                 System.out.println("Exception Handle"+except);
 				tf.setText(str);
@@ -448,15 +448,15 @@ class Calc implements ActionListener
 		}
 		if(e.getSource()==sub)
 		{
-			try 
-			{    
+			try
+			{
 				calculate(ch);
 				ch=2;
 				str=str+"-";
 				buffer="";
 				tf.setText(str);
-            } 
-			catch(Exception except) 
+            }
+			catch(Exception except)
 			{
                 System.out.println("Exception Handle"+except);
 				tf.setText(str);
@@ -465,12 +465,12 @@ class Calc implements ActionListener
 //=
 		if(e.getSource()==equ)
 		{
-			try 
-			{    
+			try
+			{
 				calculate(ch);
 				tf.setText(String.valueOf(result));
-            } 
-			catch(Exception except) 
+            }
+			catch(Exception except)
 			{
                 System.out.println("Exception Handle"+except);
 				tf.setText(String.valueOf(result));
@@ -481,9 +481,9 @@ class Calc implements ActionListener
 		}
 //.
 		if(e.getSource()==dot)
-		{ 
+		{
 			if(buffer.indexOf(".")==-1)
-			{    
+			{
 				str=str+".";
 				buffer=buffer+".";
 				tf.setText(str);
@@ -491,7 +491,7 @@ class Calc implements ActionListener
 			else
 			{
 				tf.setText(str);
-			}						
+			}
 		}
 //sqrt,1/x
 		if(e.getSource()==sqrt)
